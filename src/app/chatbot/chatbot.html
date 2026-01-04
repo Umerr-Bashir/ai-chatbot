@@ -1,0 +1,35 @@
+<div class="chat-wrapper">
+  <!-- <p class="chat-title">My AI Chatbot</p> -->
+
+  <div class="chat-container">
+  <!-- <div class="d-grid gap-2 col-3 p-2">
+    <button
+      type="button"
+      name=""
+      id=""
+      class="btn btn-danger"
+    >
+      Clear
+    </button>
+  </div> -->
+  
+    <div class="messages">
+      <div
+        *ngFor="let msg of messages"
+        class="message"
+        [ngClass]="msg.sender"
+      >
+        {{ msg.text }}
+      </div>
+    </div>
+
+    <div class="input-area">
+      <input
+        [(ngModel)]="userInput"
+        placeholder="Type your message..."
+        (keydown.enter)="sendMessage()"
+      />
+      <button (click)="sendMessage()">Send</button>
+    </div>
+  </div>
+</div>
