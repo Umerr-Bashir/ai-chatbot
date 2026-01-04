@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class Gemini {
-  private API_KEY = "TaK8G0L1ux5XEfyo7GR6xbeWx0_pEsSfZdO2g7Rf6Zs"
+  private API_KEY = environment.POE_API_KEY
 
   constructor(
     private http: HttpClient
